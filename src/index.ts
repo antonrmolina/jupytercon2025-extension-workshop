@@ -8,6 +8,7 @@ import { requestAPI } from './request';
 import { ImageCaptionMainAreaWidget } from './widget';
 
 import { ILauncher } from '@jupyterlab/launcher';
+import { imageIcon } from '@jupyterlab/ui-components';
 
 
 /**
@@ -47,6 +48,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
         app.shell.add(widget, 'main');
         return widget
       },
+      icon: imageIcon,
       label: 'View a random image & caption'
     });
 
